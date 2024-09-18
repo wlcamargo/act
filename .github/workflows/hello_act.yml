@@ -1,0 +1,24 @@
+name: hello_act
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run test
+      run: |
+        echo "hello act"
+        echo $test_var
+        echo $test_var2
+        echo $secret
+      env:
+        test_var: ${{ vars.VAR_A }}
+        test_var2: ${{ vars.VAR_B }}
+        secret: ${{ secrets.SECRET }}
