@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - Dockerfile 
       
 jobs:
   build-and-push:
@@ -25,5 +27,3 @@ jobs:
         tags: |
           wlcamargo/app-act-sample-youtube:v${{ github.run_number }}
           wlcamargo/app-act-sample-youtube:latest
-
-
