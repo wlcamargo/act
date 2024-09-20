@@ -1,0 +1,29 @@
+name: build_app
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ./Dockerfile
+      
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Log in to Docker HUB
+      run: |
+        echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+    
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v5.3.0
+      with:
+        context: .
+        file: Dockerfile 
+        push: true
+        tags: |
+          wlcamargo/app-act-sample-youtube:v${{ github.run_number }}
+
