@@ -24,4 +24,6 @@ jobs:
         push: true
         tags: |
           wlcamargo/app-act-sample-youtube:v${{ github.run_number }}
+          wlcamargo/app-act-sample-youtube:latest
+
 
