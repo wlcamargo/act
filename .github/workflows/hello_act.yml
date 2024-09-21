@@ -14,7 +14,7 @@ jobs:
 
     - name: Run test
       run: |
-        echo "hello act"
+        echo "hello act!"
         echo $test_var
         echo $test_var2
         echo $secret

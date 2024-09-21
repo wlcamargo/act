@@ -6,7 +6,7 @@ Simulador de Github actions local.
 * Act
 
 ## Video Tutorial
-https://youtu.be/UqWphwqRGEg
+https://www.youtube.com/watch?v=SEkmRckjCJk
 
 ## Como instalar o Docker?
 https://www.youtube.com/playlist?list=PLbPvnlmz6e_L_3Zw_fGtMcMY0eAOZnN-H
